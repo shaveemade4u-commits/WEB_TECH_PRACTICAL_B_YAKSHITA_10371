@@ -1,0 +1,22 @@
+<html>
+<head> 
+<title> Conditional statements (else-if statements)</title>
+</head>
+<body>
+<h2>Conditional statements (else-if statements)</h2>
+<p> Print the grade of student </p>
+<script>
+var marks = prompt("Enter marks:");
+document.write("Marks: " + marks + "<br>");
+if(marks > 70) {
+    document.write("Grade: A+");
+} else if(marks >= 60 || marks == 70) {
+    document.write("Grade: A");
+} else if(marks >= 50 || marks == 60) {
+    document.write("Grade: B");
+} else {
+    document.write("Grade: Fail");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VIBGYOR Color</title>
+</head>
+<body style="font-family: Arial; padding: 20px;">
+
+<h2>VIBGYOR Color</h2>
+<p>This program shows the color name based on the letter you enter.</p>
+<hr>
+
+<script>
+let ch = prompt("Enter a VIBGYOR letter (V, I, B, G, Y, O, R)").toUpperCase();
+let result;
+
+switch(ch) {
+    case "V": result = "Violet"; break;
+    case "I": result = "Indigo"; break;
+    case "B": result = "Blue"; break;
+    case "G": result = "Green"; break;
+    case "Y": result = "Yellow"; break;
+    case "O": result = "Orange"; break;
+    case "R": result = "Red"; break;
+    default: result = "Invalid Letter!";
+}
+
+document.write("<h3>Color: " + result + "</h3>");
+</script>
+
+</body>
+</html>

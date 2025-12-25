@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Functions & Scope</title>
+</head>
+<body>
+<h2>User Defined Functions & Scope Demonstration</h2>
+<button onclick="showValues()">Click Here</button>
+<p id="output"></p>
+<script>
+function varExample() {
+    var x = 10;
+    if (true) {
+        var x = 20;
+    }
+    return "var example → x = " + x;
+}
+function letExample() {
+    let y = 10;
+    if (true) {
+        let y = 20;
+    }
+    return "let example → y = " + y +"(outer), 20 (inner but not shown)";
+}
+function constExample() {
+    const z = 50;
+    return "const example → z = " + z;
+}
+// Function that prints results on the webpage
+function showValues() {
+    let result = "";
+    result += varExample() + "<br>";
+    result += letExample() + "<br>";
+    result += constExample() + "<br>";
+
+    document.getElementById("output").innerHTML = result;
+}
+</script>
+</body>
+</html>

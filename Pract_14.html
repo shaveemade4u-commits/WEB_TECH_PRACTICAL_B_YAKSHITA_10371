@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form Validation</title>
+</head>
+<body>
+<h2>Q14: Simple Form Validation</h2>
+<form onsubmit="return validateForm()">
+    Name: <input type="text" id="name"><br><br>
+    Age: <input type="text" id="age" oninput="checkAge()"><br><br>
+    <button type="submit">Submit</button>
+</form>
+<script>
+function checkAge() {
+    let age = document.getElementById("age").value;
+    let msg = document.getElementById("msg");
+    // Loop to check each character
+    for (let i = 0; i < age.length; i++) {
+        if (age[i] < '0' || age[i] > '9') {  // if not a number
+            msg.innerHTML = "Age must contain numbers only";
+            return;
+        }
+    }
+    msg.innerHTML = ""; // clear message if valid
+}
+function validateForm() {
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    if (name === "") {
+        alert("Name cannot be empty");
+        return false;
+    }
+    if (age === "") {
+        alert("Age must be a number");
+        return false;
+    }
+    alert("Form Submitted Successfully!");
+    return true;
+}
+</script>
+</body>
+</html>

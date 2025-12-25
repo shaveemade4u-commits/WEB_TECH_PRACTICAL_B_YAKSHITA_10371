@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Conditional statements (nested-if statements)</title>
+</head>
+<body>
+<h2>Conditional statements (nested-if statements)</h2>
+<p> Greatest no. among three numbers </p>
+<script>
+var a = prompt("Enter first number:");
+var b = prompt("Enter second number:");
+var c = prompt("Enter third number:");
+
+document.write("The three numbers are: " + a +" , " + b + " , & " + c + "<br>");
+
+if (a > b) {
+    if (a > c) {
+        document.write(a + " is the greatest number");
+    } else {
+        document.write(c + " is the greatest number");
+    }
+} else {
+    if (b > c) {
+        document.write(b + " is the greatest number");
+    } else {
+        document.write(c + " is the greatest number");
+    }
+}
+</script>
+
+</body>
+</html>

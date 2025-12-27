@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <!--B_YAKSHITA_10371-->
+
+    <title>Show and Hide Content</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>JavaScript Visibility Control</h1>
+
+<p>
+    JavaScript can be used to control the visibility of HTML elements.
+</p>
+
+<p id="details">
+    This paragraph explains how CSS classes are toggled using JavaScript.
+</p>
+
+<button onclick="toggleDetails()">Show / Hide Details</button>
+
+<script>
+function toggleDetails() {
+    document.getElementById("details").classList.toggle("hidden");
+}
+</script>
+
+</body>
+</html>
+

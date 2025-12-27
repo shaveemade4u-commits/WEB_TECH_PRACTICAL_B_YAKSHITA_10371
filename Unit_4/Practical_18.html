@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <!--B_YAKSHITA_10371-->
+
+    <title>Element Creation and Manipulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #contentArea {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 10px;
+        }
+        button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>JavaScript Dynamic Elements</h1>
+
+<p>
+    JavaScript allows web pages to be dynamic by creating, adding,
+    and removing HTML elements at runtime.
+</p>
+
+<p>
+    The section below demonstrates how elements are created and
+    manipulated using DOM methods.
+</p>
+
+<div id="contentArea">
+    <p><strong>Initial Paragraph:</strong> This paragraph is already present.</p>
+</div>
+
+<br>
+
+<button onclick="addParagraph()">Add New Paragraph</button>
+<button onclick="removeParagraph()">Remove Last Paragraph</button>
+
+<script>
+function addParagraph() {
+    let para = document.createElement("p");
+    para.innerHTML =
+        "This paragraph was dynamically created and appended using JavaScript.";
+    document.getElementById("contentArea").append(para);
+}
+
+function removeParagraph() {
+    let area = document.getElementById("contentArea");
+
+    if (area.children.length > 1) {
+        area.removeChild(area.lastElementChild);
+    }
+}
+</script>
+
+</body>
+</html>
+

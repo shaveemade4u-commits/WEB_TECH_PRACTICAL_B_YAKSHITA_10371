@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <!--B_YAKSHITA_10371-->
+
+    <title>Event Listener Example</title>
+</head>
+<body>
+
+<h1>JavaScript Event Listeners</h1>
+
+<p id="info">
+    This paragraph responds to mouse and keyboard events using JavaScript.
+</p>
+
+<button id="mouseBtn">Mouse Event</button>
+<button onclick="removeMouseEvent()">Remove Mouse Event</button>
+
+<p id="keyInfo">
+    Press any key on the keyboard to change this paragraph.
+</p>
+
+<script>
+let mouseButton = document.getElementById("mouseBtn");
+let infoPara = document.getElementById("info");
+let keyPara = document.getElementById("keyInfo");
+
+// Mouse event using addEventListener
+function mouseAction() {
+    infoPara.innerHTML =
+        "Mouse click event detected using addEventListener.";
+}
+
+mouseButton.addEventListener("click", mouseAction);
+
+// Remove mouse event
+function removeMouseEvent() {
+    mouseButton.removeEventListener("click", mouseAction);
+    infoPara.innerHTML =
+        "Mouse event listener has been removed.";
+}
+
+// Keyboard event using addEventListener
+document.addEventListener("keydown", function () {
+    keyPara.innerHTML =
+        "Keyboard event detected using addEventListener.";
+});
+</script>
+
+</body>
+</html>

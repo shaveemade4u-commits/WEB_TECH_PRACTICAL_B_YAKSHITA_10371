@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <!--B_YAKSHITA_10371-->
+
+    <title>DOM Manipulation</title>
+</head>
+<body>
+
+<h1>About JavaScript DOM</h1>
+
+<p id="intro">
+    JavaScript allows dynamic manipulation of HTML elements.
+</p>
+
+<p class="info">
+    The Document Object Model (DOM) represents the structure of a webpage.
+</p>
+
+<button onclick="updateContent()">Learn More</button>
+
+<script>
+function updateContent() {
+    document.getElementById("intro").innerHTML =
+        "JavaScript can change HTML content dynamically using DOM methods.";
+
+    document.querySelector(".info").innerHTML =
+        "Using getElementById and querySelector, we can easily access elements.";
+}
+</script>
+
+</body>
+</html>

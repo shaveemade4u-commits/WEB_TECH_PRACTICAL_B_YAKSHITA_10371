@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <!--B_YAKSHITA_10371-->
+
+    <title>Canvas Drawing</title>
+</head>
+<body>
+
+<h2>Simple Canvas Drawing</h2>
+
+<canvas id="canvas" width="300" height="200" style="border:1px solid black;">
+</canvas>
+
+<script>
+var c = document.getElementById("canvas");
+var ctx = c.getContext("2d");
+
+/* Rectangle */
+ctx.fillStyle = "red";
+ctx.fillRect(20, 20, 80, 60);
+
+/* Circle */
+ctx.beginPath();
+ctx.arc(160, 50, 30, 0, 2 * Math.PI);
+ctx.fillStyle = "blue";
+ctx.fill();
+
+/* Triangle */
+ctx.beginPath();
+ctx.moveTo(100, 150);
+ctx.lineTo(150, 100);
+ctx.lineTo(200, 150);
+ctx.closePath();
+ctx.fillStyle = "green";
+ctx.fill();
+</script>
+
+</body>
+</html>
